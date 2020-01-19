@@ -85,10 +85,6 @@
         "0": {
             "type": "composer",
             "url": "https://repo.magento.com/"
-        },
-        "swissuplabs": {
-            "type": "composer",
-            "url": "https://ci.swissuplabs.com/api/packages.json"
         }
     },
     "extra": {
