@@ -237,6 +237,7 @@ return [
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,
         'Amazon_Payment' => 1,
+        'Bijay_CustomCategoryAttribute' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
