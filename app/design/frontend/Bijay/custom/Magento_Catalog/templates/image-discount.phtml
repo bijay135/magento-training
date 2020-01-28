@@ -1,0 +1,18 @@
+<?php
+$product = $this->getProduct();
+
+$originalPrice = $product->getPrice();
+$specialPrice = $product->getSpecialPrice();
+$specialPriceFromDate = $product->getSpecialFromDate();
+$specialPriceToDate = $product->getSpecialToDate();
+$today = time();
+
+$discountPrice = $specialPrice/$originalPrice*100;
+
+if ($specialPrice < $originalPrice) {
+    if (($today >= strtotime($specialPriceFromDate) && $today <= strtotime($specialPriceToDate))){
+        echo "<p style='color:white;background-color:purple;'>". "<b>".
+            (int)$discountPrice . "% " . "Off"."</b></p>";
+    }
+}
+?>
