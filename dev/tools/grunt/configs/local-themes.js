@@ -24,7 +24,8 @@ module.exports = {
         name: 'Bijay/custom',
         locale: 'en_US',
         files: [
-            'css/source/_extend'
+            'css/styles-m',
+            'css/styles-l'
         ],
         dsl: 'less'
     }
