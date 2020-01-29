@@ -4,6 +4,9 @@
     <module name="Bijay_HomepageSlider" setup_version="1.0.0">
         <sequence>
             <module name="Magento_Ui"/>
+            <module name="Magento_Catalog"/>
+            <module name="Magento_Widget"/>
+            <module name="Magento_Rule"/>
         </sequence>
     </module>
 </config>
