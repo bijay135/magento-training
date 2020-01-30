@@ -1,4 +1,9 @@
 <?php
+$isenabled = $this->helper('Bijay\HomepageSlider\Helper\StoreConfigFetcher')->getConfig('Homepage_Slider/configuration/enable');
+if (!$isenabled) {
+    return;
+}
+
 /**
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
@@ -6,12 +11,6 @@
 use Magento\Framework\App\Action\Action;
 
 /** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
-
-// $isenabled = Mage::getStoreConfig('Homepage_Slider/configuration/enable');
-// if (!$isenabled) {
-   //  return;
-// }
-
 ?>
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())) : ?>
     <?php
@@ -37,7 +36,7 @@ use Magento\Framework\App\Action\Action;
         <div class="block-content">
             <?= /* @noEscape */ '<!-- ' . $image . '-->' ?>
             <div class="products-<?= /* @noEscape */ $mode ?> <?= /* @noEscape */ $mode ?>">
-                <div id="owl-demo" data-mage-init='{
+                <div id="Owl.Carousel Products Slider" data-mage-init='{
                     "OwlCarousel":{
                         "autoPlay": 3000,
                         "items" : 4,
