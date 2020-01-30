@@ -7,7 +7,9 @@ $specialPriceFromDate = $product->getSpecialFromDate();
 $specialPriceToDate = $product->getSpecialToDate();
 $today = time();
 
-$discountPrice = $specialPrice/$originalPrice*100;
+if($specialPriceFromDate != 0){
+    $discountPrice = $specialPrice/$originalPrice*100;
+}
 
 if ($specialPrice < $originalPrice) {
     if (($today >= strtotime($specialPriceFromDate) && $today <= strtotime($specialPriceToDate))){

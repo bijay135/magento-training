@@ -6,6 +6,12 @@
 use Magento\Framework\App\Action\Action;
 
 /** @var \Magento\CatalogWidget\Block\Product\ProductsList $block */
+
+// $isenabled = Mage::getStoreConfig('Homepage_Slider/configuration/enable');
+// if (!$isenabled) {
+   //  return;
+// }
+
 ?>
 <?php if ($exist = ($block->getProductCollection() && $block->getProductCollection()->getSize())) : ?>
     <?php
