@@ -29,3 +29,30 @@
     
 ## Create Custom modul
 * create custom category attribute
+
+# create custom product attribute
+    * display in PLP sorting
+    * Display in layer navigation
+    * Explore how attribute are saved in Flat table, attribute search (frontend and backend)
+    * Create Attribute set programitacally
+    * Attribute set programitacally
+# category attribute
+    * Apply desing to product
+    * Move CMS block inside right column.
+    * schedule desing according to Date
+# Catalog product
+    * Tax rules and tax zones
+    * Add video in product
+    * create product.(category associate, image, inventory,custom option)
+    * Related product, up-selll and cross-sels (from code).
+# PDP page customization
+    * Add custom tabs.
+    * Remove review form tabs and display below tabs.
+    * show proce above "Add to cat".
+    * add qty incriment feature (use knockout JS).
+# PLP 
+    * Add Quick view in PLP
+    * Show Dialog message after adding product to cart.
+# Cart and order
+    * Quote, quote_item, quote_payment, quote_address, quote_shipping
+    * Order, order_item, order_payment, order_address, order_shipping
