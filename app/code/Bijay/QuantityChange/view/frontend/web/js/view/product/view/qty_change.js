@@ -23,6 +23,5 @@ define([
             var newQty = this.qty() + 1;
             this.qty(newQty);
         }
-
     });
 });

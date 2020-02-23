@@ -11,5 +11,6 @@
                 <argument name="template" xsi:type="string">Bijay_QuantityChange::catalog/product/view/addtocart.phtml</argument>
             </action>
         </referenceBlock>
+        <referenceBlock name="product.price.final" remove="true"/>
     </body>
 </page>

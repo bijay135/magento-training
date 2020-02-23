@@ -14,6 +14,7 @@
         <?php if ($block->shouldRenderQuantity()) :?>
         <div class="field qty">
             <label class="label" for="qty"><span><?= $block->escapeHtml(__('Qty')) ?></span></label>
+            <!-- custom div to load quantity buttons -->
             <div class="control" data-bind="scope: 'qty_change'">
                 <button data-bind="click: decreaseQty">-</button>
                 <input  data-bind="value: qty()"
@@ -43,6 +44,19 @@
             </div>
         </div>
         <?php endif; ?>
+        <!-- custom code to add price before add to cart -->
+        <?php echo $this->getLayout()
+            ->createBlock('Magento\Catalog\Pricing\Render',
+                "product.price.final",
+                [
+                    'data' => [
+                        'price_render' => 'product.price.render.default',
+                        'price_type_code' => 'final_price',
+                        'zone' => 'item_view'
+                    ]
+                ]
+            )
+            ->toHtml();?>
         <div class="actions">
             <button type="submit"
                     title="<?= $block->escapeHtmlAttr($buttonTitle) ?>"
