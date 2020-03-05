@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Software.
+ * @category  Webkul
+ * @package   Webkul_Mpsplitorder
+ * @author    Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Magento\Quote\Model\QuoteManagement" type="Webkul\Mpsplitorder\Model\QuoteManagement" />
+	<preference for="Magento\Checkout\Block\Onepage\Success" type="Webkul\Mpsplitorder\Block\Checkout\Success" />
+	<type name="Webkul\Mpsplitorder\Logger\Mpsplitorder">
+        <arguments>
+            <argument name="name" xsi:type="string">mpsplitorder</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Webkul\Mpsplitorder\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- manage custom price --> 
+    <type name="Webkul\MpAssignProduct\Helper\Data">
+        <plugin name="manage_custom_price_mpassign" type="Webkul\Mpsplitorder\Plugin\MpAssignProduct\Helper\Data" sortOrder="1" disabled="false"/>
+    </type>
+</config>

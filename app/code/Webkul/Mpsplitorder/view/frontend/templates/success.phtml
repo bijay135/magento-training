@@ -1,0 +1,48 @@
+<?php
+/**
+* Webkul Software.
+*
+* @category  Webkul
+* @package   Webkul_Mpsplitorder
+* @author    Webkul
+* @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+* @license   https://store.webkul.com/license.html
+*/
+?>
+<div class="checkout-success">
+    <?php if ($block->getOrderId()) { ?>
+        <?php if(count($block->getOrderArray()) > 1) { ?>
+            <p><?php echo __('Your orders # are:') ?> </p> 
+            <?php 
+            $flag = false;
+            foreach ($block->getOrderArray() as $key => $orderValue) {
+                if($flag) {
+                    echo ",";
+                }
+               $flag = true; 
+                if ($block->getCanViewOrder()) { ?>
+                    <a href="<?php echo $block->escapeHtml($orderValue['view_order_id']) ?>"><?php echo $block->escapeHtml($orderValue['order_id']) ?> </a>
+                <?php } else { ?>
+                     <?php echo $block->escapeHtml($orderValue['order_id']) ?>
+                <?php  }?>
+            <?php }
+        } else {
+            if ($block->getCanViewOrder()) { ?>
+                 <p><?php echo __('Your order number is: %1.', sprintf('<a href="%s" class="order-number"><strong>%s</strong></a>', $block->escapeHtml($block->getViewOrderUrl()), $block->escapeHtml($block->getOrderId()))) ?></p>
+            <?php } else { ?>
+                    <p><?php echo __('Your order # is: <span>%1</span>.', $block->escapeHtml($block->getOrderId())) ?></p>
+        <?php }?>
+            
+        <?php } ?>
+<?php } ?>
+            <p><?php /* @escapeNotVerified */ echo __('We\'ll email you an order confirmation with details and tracking info.') ?></p>
+
+    <?php echo $block->getAdditionalInfoHtml() ?>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <a class="action primary continue" href="<?php /* @escapeNotVerified */ echo $block->getUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Continue Shopping') ?></span></a>
+        </div>
+    </div>
+</div>
+<?php $block->removeData(); ?>

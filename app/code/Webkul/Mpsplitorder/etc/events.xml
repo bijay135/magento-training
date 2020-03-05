@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Mpsplitorder
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_model_service_quote_submit_before">
+        <observer name="webkul_mpsplitorder_quote_submit_before" instance="Webkul\Mpsplitorder\Observer\SalesOrderSaveAfterObserver" />
+    </event>
+</config>
