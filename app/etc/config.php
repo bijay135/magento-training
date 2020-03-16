@@ -237,6 +237,7 @@ return [
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,
         'Amazon_Payment' => 1,
+        'Bijay_CreateProductCLI' => 1,
         'Bijay_CustomCategoryAttribute' => 1,
         'Bijay_CustomCustomerAttribute' => 1,
         'Bijay_CustomProductAttribute' => 1,
