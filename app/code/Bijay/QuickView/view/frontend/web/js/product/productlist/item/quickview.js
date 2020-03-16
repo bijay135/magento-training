@@ -52,18 +52,8 @@ define([
             var doc = iframe.contentWindow.document;
 
             $(doc).contents().find('#product_addtocart_form').submit(function(e) {
-                e.preventDefault();
-                $.ajax({
-                    data: $(this).serialize(),
-                    type: $(this).attr('method'),
-                    url: $(this).attr('action'),
-                    success: function(response) {
-                        customerData.reload("cart");
-                        customerData.reload("messages");
-                        $(".close-modal").trigger("click");
-                        $('[data-block="minicart"]').find('[data-role="dropdownDialog"]').dropdownDialog("open");
-                    }
-                });
+                $(".close-modal").trigger("click");
+                customerData.reload("cart");
             });
         };
 

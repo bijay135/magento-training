@@ -162,7 +162,7 @@ define([
                             .find('span')
                             .html(res.product.statusText);
                     }
-                    alert("Successfully added to your shopping cart.");
+                    // alert("Successfully added to your shopping cart.");
                     self.enableAddToCartButton(form);
                 },
 
