@@ -2,19 +2,19 @@
 
 ## General
 ```
-- Payment Process Paypal Integration Sandboxed
-- Shipping Tabular Rate Uses/Impacts
+- Payment process paypal integration sandboxed
+- Shipping tabular rate uses/impacts
 - Tired pricing rules
-- Multi-Website/Store/Store View concepts
-- Different Themes different pages
+- Multi-Website/Store/Store view concepts
+- Different themes different pages
 - CMS pages/blocks/widgets usage
 - Category pages layouts explore
-- Category/Product/CMS Block Design XMl Usages
-- Multi-Shipping Concepts
-- Product Custom Options
+- Category/Product/CMS Block design xml usages
+- Multi-Shipping concepts
+- Product custom options
 ```
 
-##	Create Custom theme based on compser
+##	Create custom theme based on compser
 ```
 - Create Custom luma based theme 
 - Add custome less files to modify theme layout and design
@@ -80,12 +80,12 @@
 - Order, order_item, order_payment, order_address, order_shipping
 ```
 
-##	Product Collection Query
+##	Product collection
 ```
 - PLP get collection function
 ```
 
-##	Customer Area
+##	Customer area
 ```
 - Add customer attribute
 - Modify existing customer attribute
